@@ -44,7 +44,7 @@ const sendReceipt = (req, res) => {
         }
 
         .logo {
-          font-size: 1rem;
+          font-size: 4.23mm;
         }
 
         .logo span {
@@ -66,7 +66,7 @@ const sendReceipt = (req, res) => {
           -webkit-box-pack: justify;
           justify-content: space-between;
           margin-top: 3mm;
-          padding-bottom: 0.2rem;
+          padding-bottom: 0.84666mm;
         }
 
         .items_body.header {
@@ -75,6 +75,14 @@ const sendReceipt = (req, res) => {
 
         .items_body h5 , .items_body h6{
           text-align: center;
+        }
+
+        .item_body h5 {
+          font-size: 3.500mm;
+        }
+
+        .item_body h6 {
+          font-size: 3.163mm;
         }
 
         .items_body h5:first-child, .items_body h6:first-child {
@@ -95,7 +103,7 @@ const sendReceipt = (req, res) => {
           display: -webkit-box;
           -webkit-box-pack: end;
           justify-content: flex-end;
-          margin: 0.1rem auto;
+          margin: 0.4233mm auto;
         }
   
         .total_price {
@@ -107,15 +115,20 @@ const sendReceipt = (req, res) => {
         }
   
         .total_price h5 {
-          margin-right: 0.5rem;
+          margin-right: 2.116mm;
+          font-size: 3.500mm;
+        }
+
+        .total_price span {
+          font-size: 3.500mm;
         }
 
         .info p {
-          font-size: 0.7rem;
+          font-size: 2.963mm;
         }
 
         .info p:first-child {
-          font-size: 0.55rem;
+          font-size: 2.328mm;
         }
       </style>
     </head>
@@ -175,7 +188,7 @@ const sendReceipt = (req, res) => {
     path.parse(path.parse(__dirname).dir).dir,
     "public/receipt.pdf"
   );
-  let options = { height: `${itemsObj.length * 11 + 50}mm`, width: "120mm" };
+  let options = { height: `${itemsObj.length * 14 + 50}mm`, width: "80mm" };
   fs.writeFile(tempHtml, receiptTemp, (err) => {
     if (err) {
       return console.log(err);
