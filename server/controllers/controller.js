@@ -188,7 +188,7 @@ const sendReceipt = (req, res) => {
     path.parse(path.parse(__dirname).dir).dir,
     "public/receipt.pdf"
   );
-  let options = { height: `${itemsObj.length * 14 + 50}mm`, width: "80mm" };
+  let options = { height: `${itemsObj.length * 17 + 50}mm`, width: "120mm" };
   fs.writeFile(tempHtml, receiptTemp, (err) => {
     if (err) {
       return console.log(err);
