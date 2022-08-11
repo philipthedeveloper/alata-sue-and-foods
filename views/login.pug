@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    <title>ALATA SUE & FOODS</title>
+    link(rel="stylesheet", href="/css/login.css")
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+  body      
+    header
+      img(src="/img/ALATA SUE FOODS.png", alt="" id="logo")
+
+    main 
+      .order_form   
+        form(action="/dashboard", method="post") 
+          .form_group 
+            label(for="cashier_name") Enter Cashier Name: 
+            input(type="text", name="cashier_name" id="cashier_name" placeholder="Enter cashier name here..." required)
+          button Continue to Dashboard

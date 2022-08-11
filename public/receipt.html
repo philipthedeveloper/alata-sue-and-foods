@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Receipt</title>
+      <style>
+        * {
+          margin: 0;
+          padding: 0;
+          -webkit-box-sizing: border-box;
+        }
+        body {
+          padding: 4mm;
+          font-family: "Nunito", sans-serif;
+        }
+        header {
+          display: flex;
+          display: -webkit-box;
+          -webkit-box-pack: justify;
+          justify-content: space-between;
+          -webkit-box-align: start;
+        }
+  
+        main {
+          margin-top: 5mm;
+        }
+
+        .logo {
+          font-size: 1rem;
+        }
+
+        .logo span {
+          display: block;
+        }
+
+        .logo span:first-child {
+          color: #EC268F;
+        }
+
+        .logo span:last-child {
+          color: #00AFEF;
+          margin-top: -1mm; 
+        }
+  
+        .items_body {
+          display: flex;
+          display: -webkit-box;
+          -webkit-box-pack: justify;
+          justify-content: space-between;
+          margin-top: 3mm;
+          padding-bottom: 0.2rem;
+        }
+
+        .items_body.header {
+          border-bottom: 1px solid gray;
+        }
+
+        .items_body h5 , .items_body h6{
+          text-align: center;
+        }
+
+        .items_body h5:first-child, .items_body h6:first-child {
+          min-width: 40mm;
+          text-align: left;
+        }
+        
+        .items_body h5:last-child, .items_body h6:last-child{
+          min-width: 16mm;  
+          text-align: right;
+        }
+        .items_body h5:nth-child(2), .items_body h6:nth-child(2){
+          min-width: 16mm;
+        }
+  
+        .total {
+          display: flex;
+          display: -webkit-box;
+          -webkit-box-pack: end;
+          justify-content: flex-end;
+          margin: 0.1rem auto;
+        }
+  
+        .total_price {
+          display: flex;
+          display: -webkit-box;
+          -webkit-box-align: center;
+          align-items: center;
+          margin-top: 1mm;
+        }
+  
+        .total_price h5 {
+          margin-right: 0.5rem;
+        }
+
+        .info p {
+          font-size: 0.7rem;
+        }
+
+        .info p:first-child {
+          font-size: 0.55rem;
+        }
+      </style>
+    </head>
+    <body>
+      <header>
+        <h2 class="logo">
+          <span>ALATA SUE</span>
+          <span>& FOODS</span>
+        </h2>
+        <img src="/img/ALATA SUE FOODS.png", alt="" id="logo"/>
+        <div class="info">
+          <p>Date Created: 8/11/2022, 2:20:14 PM</p>
+          <p>Cashier Name: kefsadkj</p>
+        </div>
+      </header>
+      <main>
+      <div class="items_body header">
+        <h5>Item Name</h5>
+        <h5> Quantity </h5>
+        <h5>Price</h5>
+      </div><div class="items_body">
+                      <h6>Coconut Rice</h6>
+                      <h6> 1 </h6>
+                      <h6> 250</h6>
+                    </div><div class="total" style="margin-top: 0.9rem;">
+                    <span class="total_price">
+                      <h5>Total: </h5>
+                      <span> &#8358;250 </span>
+                    </span>
+                  </div>
+                  <div class="total">
+                    <span class="total_price">
+                      <h5>Amount Received: </h5>
+                      <span> &#8358;1000 </span>
+                    </span>
+                  </div>
+                  <div class="total">
+                    <span class="total_price">
+                      <h5>Change Issured: </h5>
+                      <span> &#8358;750 </span>
+                    </span>
+                  </div>

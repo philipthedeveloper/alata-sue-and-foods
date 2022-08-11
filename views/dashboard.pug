@@ -1,0 +1,60 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    <title>ALATA SUE & FOODS</title>
+    link(rel="stylesheet", href="/css/index.css")
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    script(src="/js/client.js" defer) 
+  body      
+    header
+      img(src="/img/ALATA SUE FOODS.png", alt="" id="logo")
+      .header 
+        h2#cashier Current Cashier: #{cashier_name}
+        //- button#place_order Place New Order.
+
+    main 
+      .order_form   
+        h3#order_form_title order form
+        .add_item_container
+          button#add_new_item  + Add New Item
+        .items_header   
+          h4 S/N
+          h4 Name 
+          h4 Quantity 
+          h4 Price 
+          h4 Total Price
+        .items_added
+      .total  
+        .payment_info
+        span#total_price 
+      .pdf_container 
+        button#generate_pdf Generate Receipt
+
+      .modal 
+        <span id="close_modal"> X </span>
+        <form action="" method="post" id="item_form">
+          .form_group 
+            label(for="item_list") Select Item:
+            select(name="item_name" id="item_list") 
+              option(value='none' selected) ~ 
+              each item in ITEMS 
+                option(value=`${item.name}`) #{item.name.toUpperCase()}
+          .form_group 
+            label(for="quantity") Quantity: 
+            input(type="number", name="quantity" min="1", max="1000" step="1" id="quantity" value="1")
+
+          <button type="submit" id="add_item">Add Item</button>
+        </form>
+
+    .processor 
+      .spinner 
+      p.processor_text Please wait, while we generate receipt
+        span.a .
+        span.b .
+        span.c .

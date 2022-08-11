@@ -1,0 +1,76 @@
+:root {
+  --primaryGray: #e6e6e6;
+  --secondaryGray: #f0f0f0;
+  --modalBlack: rgba(0, 0, 0, 0.7);
+  --basePink: #ec268f;
+  --baseBlue: #00afef;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+main,
+header {
+  max-width: 1100px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo {
+  display: block;
+  width: 200px;
+  margin: 1rem auto;
+}
+
+main {
+  margin-top: 2rem;
+}
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+.form_group label {
+  margin-bottom: 1rem;
+  color: var(--baseBlue);
+  font-weight: bold;
+}
+
+.form_group input {
+  border: none;
+  outline: none;
+  padding: 0.7rem 1rem;
+  border-radius: 0.4rem;
+  background-color: var(--secondaryGray);
+  font-family: inherit;
+  width: 100%;
+}
+
+.order_form button {
+  margin-top: 1.5rem;
+  border: none;
+  outline: none;
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  background-color: var(--primaryGray);
+  transition: 0.3s ease;
+  width: 100%;
+}
+
+.order_form button:hover {
+  color: #fff;
+  background-color: var(--basePink);
+}
