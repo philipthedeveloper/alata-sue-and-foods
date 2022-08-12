@@ -29,7 +29,6 @@ const sendReceipt = (req, res) => {
         }
         body {
           padding: 4mm;
-          padding-bottom: 40mm;
           font-family: "Nunito", sans-serif;
         }
         header {
@@ -66,7 +65,7 @@ const sendReceipt = (req, res) => {
           display: -webkit-box;
           -webkit-box-pack: justify;
           justify-content: space-between;
-          margin-top: 8mm;
+          margin-top: 3mm;
           padding-bottom: 0.84666mm;
         }
 
@@ -180,9 +179,7 @@ const sendReceipt = (req, res) => {
                       <h5>Change Issured: </h5>
                       <span> &#8358;${changeIssued} </span>
                     </span>
-                  </div>
-                </main>
-              </body>`;
+                  </div>`;
   const tempHtml = path.join(
     path.parse(path.parse(__dirname).dir).dir,
     "public/receipt.html"
